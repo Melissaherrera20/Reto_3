@@ -21,19 +21,19 @@ import javax.persistence.Table;
 @Entity
 @Table(name ="message")
 public class Mensaje implements Serializable {
-    @Id
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMessage;
     private String messageText;
     
     @ManyToOne
     @JoinColumn(name="id")
-    @JsonIgnoreProperties ({"messages", "reservation"})
+    @JsonIgnoreProperties ({"messages", "reservations"})
     private Cloud cloud;
     
     @ManyToOne
     @JoinColumn(name="clientId")
-    @JsonIgnoreProperties ({"message", "reservation"})
+    @JsonIgnoreProperties ({"messages", "reservations"})
     private Cliente client;
 
     public Integer getIdMessage() {
