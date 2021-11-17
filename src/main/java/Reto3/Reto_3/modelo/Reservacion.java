@@ -17,7 +17,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author Usuario
+ * @author Usuario 
  */
 @Entity
 @Table(name ="reservation")
